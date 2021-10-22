@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int i,j,min,x,n,n1,min1;
+	printf("enter the no of element that you want to sort: ");
+	scanf("%d",&n);
+	n1=n;
+	int *a=(int *)malloc(n*sizeof(int));
+	for(i=0;i<n;i++){
+		printf("element %d:",i+1);
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(a[i]>a[j]){
+			min=j;
+			}
+		if(min!=min1){
+		x=a[i];
+		a[i]=a[min];
+		a[min]=x;
+		min=min1;
+		}
+		}
+		
+	}
+	for(i=0;i<n1;i++){
+		printf("%d ",a[i]);
+	}
+	return 0;
+}
